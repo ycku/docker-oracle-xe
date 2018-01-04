@@ -1,4 +1,4 @@
-docker-oracle-xe-11g
+docker-oracle-xe
 ============================
 Oracle Express Edition 11g Release 2 on Ubuntu 14.04.1 LTS
 - Docker Hub: https://hub.docker.com/r/ycku/oracle-xe/
@@ -9,11 +9,11 @@ Oracle Express Edition 11g Release 2 on Ubuntu 14.04.1 LTS
 
 Run with 8080 and 1521 ports opened:
 
-    docker run -d -p 8080:8080 -p 1521:1521 sath89/oracle-xe-11g
+    docker run -d -p 8080:8080 -p 1521:1521 ycku/oracle-xe
 
 Run with data on host and reuse it:
 
-    docker run -d -p 8080:8080 -p 1521:1521 -v /my/oracle/data:/u01/app/oracle sath89/oracle-xe-11g
+    docker run -d -p 8080:8080 -p 1521:1521 -v /my/oracle/data:/u01/app/oracle ycku/oracle-xe
 
 Run with customization of processes, sessions, transactions
 This customization is needed on the database initialization stage. If you are using mounted folder with DB files this is not used:
@@ -26,11 +26,11 @@ This customization is needed on the database initialization stage. If you are us
     -e processes=1000 \
     -e sessions=1105 \
     -e transactions=1215 \
-    sath89/oracle-xe-11g
+    ycku/oracle-xe
 
 Run with custom sys password:
 
-    docker run -d -p 8080:8080 -p 1521:1521 -e DEFAULT_SYS_PASS=sYs-p@ssw0rd sath89/oracle-xe-11g
+    docker run -d -p 8080:8080 -p 1521:1521 -e DEFAULT_SYS_PASS=sYs-p@ssw0rd ycku/oracle-xe
 
 Connect database with following setting:
 
@@ -58,7 +58,7 @@ Details could be found here: https://github.com/MaksymBilenko/docker-oracle-apex
 
 Auto import of sh sql and dmp files
 
-    docker run -d -p 8080:8080 -p 1521:1521 -v /my/oracle/data:/u01/app/oracle -v /my/oracle/init/sh_sql_dmp_files:/docker-entrypoint-initdb.d sath89/oracle-xe-11g
+    docker run -d -p 8080:8080 -p 1521:1521 -v /my/oracle/data:/u01/app/oracle -v /my/oracle/init/sh_sql_dmp_files:/docker-entrypoint-initdb.d ycku/oracle-xe
 
 **In case of using DMP imports dump file should be named like ${IMPORT_SCHEME_NAME}.dmp**
 **User credentials for imports are  ${IMPORT_SCHEME_NAME}/${IMPORT_SCHEME_NAME}**
