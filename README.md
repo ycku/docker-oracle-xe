@@ -1,16 +1,11 @@
 docker-oracle-xe-11g
 ============================
-[![](https://images.microbadger.com/badges/image/sath89/oracle-xe-11g.svg)](https://microbadger.com/images/sath89/oracle-xe-11g "Get your own image badge on microbadger.com")
-
-[![](https://images.microbadger.com/badges/version/sath89/oracle-xe-11g.svg)](https://microbadger.com/images/sath89/oracle-xe-11g "Get your own version badge on microbadger.com")
-
 Oracle Express Edition 11g Release 2 on Ubuntu 14.04.1 LTS
-
-This **Dockerfile** is a [trusted build](https://registry.hub.docker.com/u/sath89/oracle-xe-11g/) of [Docker Registry](https://registry.hub.docker.com/).
+- Docker Hub: https://hub.docker.com/r/ycku/oracle-xe/
 
 ### Installation
 
-    docker pull sath89/oracle-xe-11g
+    docker pull ycku/oracle-xe
 
 Run with 8080 and 1521 ports opened:
 
@@ -67,8 +62,6 @@ Auto import of sh sql and dmp files
 
 **In case of using DMP imports dump file should be named like ${IMPORT_SCHEME_NAME}.dmp**
 **User credentials for imports are  ${IMPORT_SCHEME_NAME}/${IMPORT_SCHEME_NAME}**
-
-**In case of any issues please post it [here](https://github.com/MaksymBilenko/docker-oracle-xe-11g/issues).**
 
 
 **CHANGELOG**
